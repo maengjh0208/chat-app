@@ -1,0 +1,13 @@
+services:
+  chat-api:
+    build: ./chat-api
+    container_name: chat-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./chat-api/src:/app/src
+    networks:
+      - chat-app
+
+networks:
+  chat-app:
